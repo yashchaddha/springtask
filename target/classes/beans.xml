@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.stackroute.domain.Movie" name="movieA,movieB" scope="prototype">
+        <constructor-arg index="0" ref="actorFirst"></constructor-arg>
+        <constructor-arg index="1" ref="actorSecond"></constructor-arg>
+        <constructor-arg index="2" ref="actorThird"></constructor-arg>
+    </bean>
+
+    <bean class="com.stackroute.domain.Actor" id="actorFirst">
+        <constructor-arg index="0" name="name" type="String" value="Anurag"></constructor-arg>
+        <constructor-arg index="1" name="gender" type="String" value="Male"></constructor-arg>
+        <constructor-arg index="2" name="age" type="int" value="21"></constructor-arg>
+
+    </bean>
+    <bean class="com.stackroute.domain.Actor" id="actorSecond">
+        <constructor-arg index="0" name="name" type="String" value="Ankit"></constructor-arg>
+        <constructor-arg index="1" name="gender" type="String" value="Male"></constructor-arg>
+        <constructor-arg index="2" name="age" type="int" value="20"></constructor-arg>
+    </bean>
+    <bean class="com.stackroute.domain.Actor" id="actorThird">
+        <constructor-arg index="0" name="name" type="String" value="Ankita"></constructor-arg>
+        <constructor-arg index="1" name="gender" type="String" value="Female"></constructor-arg>
+        <constructor-arg index="2" name="age" type="int" value="14"></constructor-arg>
+    </bean>
+
+
+</beans>
